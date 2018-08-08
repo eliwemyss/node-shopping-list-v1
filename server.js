@@ -25,7 +25,7 @@ ShoppingList.create('beans', 2);
 ShoppingList.create('tomatoes', 3);
 ShoppingList.create('peppers', 4);
 
-Recipes.create('chocolate milk', ['cocoa', 'milk', 'sugar'])
+Recipes.create('chocolate milk', ['cocoa', 'milk', 'sugar']);
 
 // when the root of this route is called with GET, return
 // all current ShoppingList items by calling `ShoppingList.get()`
@@ -33,9 +33,9 @@ app.get('/shopping-list', (req, res) => {
   res.json(ShoppingList.get());
 });
 
-app.get('/Recipes'), (req, res) => {
+app.get('/Recipes', (req, res) => {
 	res.json(Recipes.get());
-}
+})
 
 app.listen(process.env.PORT || 8080, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
